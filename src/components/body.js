@@ -4,14 +4,14 @@ const Body = ({ propsUrl, propsMediaType }) => {
 
   if(propsMediaType === 'video') {
     return (
-      <iframe width='420' height='315'
+      <iframe className='imgVideo' width='420' height='315'
         src={propsUrl}>
       </iframe>
     )
   }
   else {
     return (
-      <img src={propsUrl} />
+      <img className='imgVideo' src={propsUrl} />
     )
   }
 };
