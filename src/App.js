@@ -5,7 +5,8 @@ import axios from "axios";
 import Header from './components/header.js'
 import Body from './components/body.js'
 import Footer from './components/footer.js'
-import SomeComponent from './components/styledComponents1'
+import SomeComponent from './components/styledComponents1.js'
+import Calendar from './components/calendarComponent.js'
 
 function App() {
 
@@ -64,6 +65,9 @@ function App() {
               <Footer
                 propsMediaType={nasaMediaType}
                 propsUrl={nasaUrl}
+              />
+              <Calendar
+                propsCalendarDate={nasaDate}
               />
             </footer>
           </div>
