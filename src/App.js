@@ -5,9 +5,12 @@ import axios from "axios";
 import Header from './components/header.js'
 import Body from './components/body.js'
 import Footer from './components/footer.js'
+import SomeComponent from './components/styledComponents1.js'
+import Calendar from './components/calendarComponent.js'
 
 function App() {
 
+  // state variables
   const [nasaUrl, setNasaUrl] = useState('')
   const [nasaDate, setNasaDate] = useState('')
   const [nasaTitle, setNasaTitle] = useState('')
@@ -37,6 +40,7 @@ function App() {
         // Read through the instructions in the README.md file to build your NASA
         // app! Have fun 🚀!
         }
+        <SomeComponent />
       </p>
       <div className='header'>
         <header>
@@ -58,10 +62,12 @@ function App() {
           </div>
           <div className='footer'>
             <footer>
-              <h3>Extra Info:</h3>
               <Footer
                 propsMediaType={nasaMediaType}
                 propsUrl={nasaUrl}
+              />
+              <Calendar
+                propsCalendarDate={nasaDate}
               />
             </footer>
           </div>
