@@ -61,7 +61,6 @@ function App() {
           </div>
           <div className='footer'>
             <footer>
-              <h3>Extra Info:</h3>
               <Footer
                 propsMediaType={nasaMediaType}
                 propsUrl={nasaUrl}

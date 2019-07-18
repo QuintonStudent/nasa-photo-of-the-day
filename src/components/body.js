@@ -1,17 +1,30 @@
 import React from "react";
+import styled from 'styled-components'
+
+const BodyDiv = styled.div`
+  border: 3px solid #fc3d21;
+  border-radius: 8px;
+  width: 500px;
+  margin: auto;
+  padding: 25px 0;
+`;
 
 const Body = ({ propsUrl, propsMediaType }) => {
 
   if(propsMediaType === 'video') {
     return (
-      <iframe className='imgVideo' width='420' height='315'
-        src={propsUrl}>
-      </iframe>
+      <BodyDiv>
+        <iframe width='420' height='315'
+          src={propsUrl}>
+        </iframe>
+      </BodyDiv>
     )
   }
   else {
     return (
-      <img className='imgVideo' src={propsUrl} />
+      <BodyDiv>
+        <img width='420' src={propsUrl} />
+      </BodyDiv>
     )
   }
 };
